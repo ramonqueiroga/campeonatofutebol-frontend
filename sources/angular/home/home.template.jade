@@ -1,0 +1,21 @@
+ul
+  li
+    a(ui-sref='home') home
+    a(ui-sref='about') about
+
+p {{homeController.viewName}} view
+
+div
+  h1 {{homeController.user.title}}
+
+div(layout='row', layout-align='center center', style='min-height: 500px')
+  form(name='homeform', ng-submit='homeController.enviar()' novalidate)
+    md-input-container
+      label Title
+      input(ng-model='homeController.user.title', name='titulo')
+    md-input-container
+      label Email
+      input(ng-model='homeController.user.email', type='email', name='email')
+    div
+      md-button(type='submit') Enviar
+
