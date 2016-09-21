@@ -12,8 +12,9 @@ md-content.md-padding
         md-subheader.md-no-sticky {{playerController.pageDescription}}
         md-list-item.md-3-line(ng-click='null', ng-repeat='player in playerController.players')
           img.md-avatar(ng-src='https://avatars1.githubusercontent.com/u/12114424?v=3&u=a9c7455d5ae197b71cf0cfafb03275dbd4e25543&s=140', alt='avatar')
-          div.md-list-item-text(layout='column')
+          div.md-list-item-text(layout='column', flex='90')
             h3 Nome: {{player.name}} {{player.sobrenome}}
             h3 Habilidade: {{player.hability}}
-        md-divider
+            h3 Habilidade: {{player.hability}}
+          md-divider
 
