@@ -1,20 +1,13 @@
-md-content.md-padding
-  md-nav-bar(md-selected-nav-item='currentNavItem', nav-bar-aria-label='navigation links')
-    md-nav-item(md-nav-click="goto('home')", name='Home') Home
-    md-nav-item(md-nav-click="goto('about')", name='about') About
-    md-nav-item(md-nav-click="goto('player')", name='player') Player
-  
-  div(flex-gt-sm='100', flex='')
-    md-toolbar.md-toolbar-tools(layout='row')
-      span {{playerController.pageTitle}}
-    md-content
-      md-list(flex='')
-        md-subheader.md-no-sticky {{playerController.pageDescription}}
-        md-list-item.md-3-line(ng-click='null', ng-repeat='player in playerController.players')
-          img.md-avatar(ng-src='https://avatars1.githubusercontent.com/u/12114424?v=3&u=a9c7455d5ae197b71cf0cfafb03275dbd4e25543&s=140', alt='avatar')
-          div.md-list-item-text(layout='column', flex='90')
-            h3 Nome: {{player.name}} {{player.sobrenome}}
-            h3 Habilidade: {{player.hability}}
-            h3 Habilidade: {{player.hability}}
-          md-divider
-
+div(flex-gt-sm='100', flex='')
+  md-toolbar.md-toolbar-tools(layout='row')
+    span {{playerController.pageTitle}}
+  md-content
+    md-list(flex='')
+      md-subheader.md-no-sticky {{playerController.pageDescription}}
+      md-list-item.md-3-line(ng-click='null', ng-repeat='player in playerController.players')
+        img.md-avatar(ng-src='https://avatars1.githubusercontent.com/u/12114424?v=3&u=a9c7455d5ae197b71cf0cfafb03275dbd4e25543&s=140', alt='avatar')
+        div.md-list-item-text(layout='column', flex='90')
+          h3 Nome: {{player.name}} {{player.sobrenome}}
+          h3 Habilidade: {{player.hability}}
+          h3 Habilidade: {{player.hability}}
+        md-divider

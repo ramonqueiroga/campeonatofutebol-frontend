@@ -9,6 +9,11 @@ html(ng-app='campeonatofutebol')
     include templates/links
 
   body
+    md-content.md-padding
+      md-nav-bar(md-selected-nav-item='currentNavItem', nav-bar-aria-label='navigation links')
+        md-nav-item(md-nav-click="goto('home')", name='Home') Home
+        md-nav-item(md-nav-click="goto('about')", name='about') About
+        md-nav-item(md-nav-click="goto('player')", name='player') Player    
     div(ui-view)
 
     include templates/scripts

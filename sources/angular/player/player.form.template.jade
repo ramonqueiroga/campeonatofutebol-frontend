@@ -1,0 +1,14 @@
+div(layout='row', flex, style='border:1px double #000')
+  div(layout='column', flex='')
+    div(layout='row', layout-align='space-around center')
+      form(novalidade, name='playerForm', ng-submit='playerFormController.sendForm()')
+        label Name
+        input(type='text', name='name', ng-model='playerFormController.player.name')
+        label Surname
+        input(type='text', name='surname', ng-model='playerFormController.player.sobrenome')
+        label Hability
+        input(type='text', name='hability', ng-model='playerFormController.player.hability')
+        input(type='submit', value='Enviar')
+  div(layout='column', flex='')    
+    h3 teste
+  

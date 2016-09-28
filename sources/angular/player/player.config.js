@@ -11,4 +11,4 @@ function playerConfig($stateProvider) {
     controller: 'PlayerController',
     controllerAs: 'playerController',
   });
-}
+};
